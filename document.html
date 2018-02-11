@@ -211,6 +211,62 @@ $(document).ready(function () {
 <h2>6. Wartości atrybutów</h2>
 <p>Używamy do obliczeń tylko kolumn, co do których mamy uzasadnione podejrzenie, że są ciągłe. Wszystkie zmienne, co do których istnieje wątpliwość na rzecz danych kategorycznych pomijamy.</p>
 <pre class="r"><code>summary(data)</code></pre>
+<pre><code>##       kwh         wiekWMiesiacach       rok           dzien       
+##  Min.   :0.0000   Min.   :0.0000   Min.   :2012   Min.   :0.0000  
+##  1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:2012   1st Qu.:0.2520  
+##  Median :0.0490   Median :0.1250   Median :2012   Median :0.4770  
+##  Mean   :0.1688   Mean   :0.3145   Mean   :2012   Mean   :0.4812  
+##  3rd Qu.:0.3320   3rd Qu.:0.7190   3rd Qu.:2013   3rd Qu.:0.7100  
+##  Max.   :1.0000   Max.   :1.0000   Max.   :2013   Max.   :1.0000  
+##      moment      temperaturaOtoczenia naslonecznienie    cisnienie     
+##  Min.   :0.000   Min.   :0.0450       Min.   :0.0000   Min.   :0.0000  
+##  1st Qu.:0.222   1st Qu.:0.2120       1st Qu.:0.0000   1st Qu.:0.7480  
+##  Median :0.500   Median :0.3480       Median :0.0350   Median :0.7530  
+##  Mean   :0.500   Mean   :0.3734       Mean   :0.1091   Mean   :0.6504  
+##  3rd Qu.:0.778   3rd Qu.:0.5300       3rd Qu.:0.2040   3rd Qu.:0.7550  
+##  Max.   :1.000   Max.   :0.8180       Max.   :0.7100   Max.   :0.7690  
+##  predkoscWiatur      wilgotnosc          icon          punktRosy     
+##  Min.   :0.00000   Min.   :0.1600   Min.   :0.0000   Min.   :0.1390  
+##  1st Qu.:0.04200   1st Qu.:0.5400   1st Qu.:0.0830   1st Qu.:0.5350  
+##  Median :0.06600   Median :0.7000   Median :0.6670   Median :0.6190  
+##  Mean   :0.07622   Mean   :0.6844   Mean   :0.4623   Mean   :0.6055  
+##  3rd Qu.:0.10200   3rd Qu.:0.8400   3rd Qu.:0.6670   3rd Qu.:0.6830  
+##  Max.   :0.69600   Max.   :1.0000   Max.   :0.7500   Max.   :0.8650  
+##  lozyskoWiatrowe   zachmurzenie    temperaturaI    naslonecznienieI
+##  Min.   :0.0000   Min.   :0.000   Min.   :0.0090   Min.   :0.108   
+##  1st Qu.:0.3000   1st Qu.:0.230   1st Qu.:0.0730   1st Qu.:0.216   
+##  Median :0.4780   Median :0.310   Median :0.1110   Median :0.220   
+##  Mean   :0.4512   Mean   :0.359   Mean   :0.1225   Mean   :0.222   
+##  3rd Qu.:0.6600   3rd Qu.:0.510   3rd Qu.:0.1260   3rd Qu.:0.222   
+##  Max.   :0.7690   Max.   :1.000   Max.   :0.9830   Max.   :1.000   
+##    cisnienieI       predkoscWiatuIr    wilgotnoscI        punktRosyI    
+##  Min.   :0.000000   Min.   :0.00000   Min.   :0.03400   Min.   :0.0630  
+##  1st Qu.:0.000000   1st Qu.:0.03700   1st Qu.:0.04400   1st Qu.:0.1140  
+##  Median :0.000000   Median :0.03800   Median :0.04400   Median :0.1140  
+##  Mean   :0.000237   Mean   :0.03852   Mean   :0.06384   Mean   :0.1194  
+##  3rd Qu.:0.000000   3rd Qu.:0.03900   3rd Qu.:0.06200   3rd Qu.:0.1180  
+##  Max.   :1.000000   Max.   :1.00000   Max.   :0.57900   Max.   :0.4150  
+##  lozyskoWiatroweI zachmurzenieI      odleglosc         wysokosc     
+##  Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.1110  
+##  1st Qu.:0.3360   1st Qu.:0.1960   1st Qu.:0.1913   1st Qu.:0.4190  
+##  Median :0.3360   Median :0.1960   Median :0.4590   Median :0.5640  
+##  Mean   :0.3455   Mean   :0.2062   Mean   :0.4686   Mean   :0.5464  
+##  3rd Qu.:0.3390   3rd Qu.:0.1980   3rd Qu.:0.7268   3rd Qu.:0.6810  
+##  Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :0.8840  
+##  szerkoscGeograficzna   wysokoscI      szerkoscGeograficznaI
+##  Min.   :0.1280       Min.   :0.0000   Min.   :0.0000       
+##  1st Qu.:0.2950       1st Qu.:0.0960   1st Qu.:0.2090       
+##  Median :0.4250       Median :0.1360   Median :0.2880       
+##  Mean   :0.4546       Mean   :0.2055   Mean   :0.3653       
+##  3rd Qu.:0.6350       3rd Qu.:0.2660   3rd Qu.:0.4820       
+##  Max.   :0.8180       Max.   :0.9820   Max.   :1.0000       
+##  wspolczynnikNaslonecznieniaPVGIS wspolczynnikNaslonecznieniaPVGISI
+##  Min.   :0.0000                   Min.   :-0.0250                  
+##  1st Qu.:0.0000                   1st Qu.: 0.1580                  
+##  Median :0.0560                   Median : 0.1940                  
+##  Mean   :0.1767                   Mean   : 0.1967                  
+##  3rd Qu.:0.3250                   3rd Qu.: 0.2130                  
+##  Max.   :1.0000                   Max.   : 1.0060</code></pre>
 </div>
 <div id="korelacja-miedzy-moca-a-reszta-wspoczynnikow" class="section level2">
 <h2>7. Korelacja między mocą a resztą współczynników</h2>

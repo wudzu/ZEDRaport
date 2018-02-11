@@ -4,7 +4,7 @@ author: "Patryk Wêglarz"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
-    df_print: paged
+    keep_md: yes
 ---
 
 ## Wstêp
@@ -104,7 +104,7 @@ Rozmiar pliku csv to 66,3MB. U¿yto jednak tylko po³owê kolumn, resztê wartoœci p
 
 U¿ywamy do obliczeñ tylko kolumn, co do których mamy uzasadnione podejrzenie, ¿e s¹ ci¹g³e. Wszystkie zmienne, co do których istnieje w¹tpliwoœæ na rzecz danych kategorycznych pomijamy.
 
-```{r wartosci, ECHO=TRUE, results='hide'}
+```{r wartosci, ECHO=TRUE}
 summary(data)
 ```
 
