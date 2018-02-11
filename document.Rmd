@@ -170,7 +170,7 @@ summary(data)
 
 ## 9. Model
 
-```{r model, ECHO=TRUE, results='hide'}
+```{r model, ECHO=TRUE}
       cof <- model()$coefficients;
       
       names <- names(model()$coefficients);
@@ -187,7 +187,7 @@ summary(data)
 
 Blad modelu jest nastêpuj¹cy:
 
-```{r bladModelu, ECHO=TRUE, results='hide'}
+```{r bladModelu, ECHO=FALSE}
       error_vec <- unname(predict.lm(model(),test())) - test()[,1];
       error_vec <- error_vec * error_vec;
       mean(error_vec)

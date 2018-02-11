@@ -255,6 +255,13 @@ summary(data)
       as.data.frame(hprint,optional = T)
 ```
 
+```
+##                                                      
+## 1                             bias 0.0157619960219939
+## 2                  naslonecznienie  0.821077879844465
+## 3 wspolczynnikNaslonecznieniaPVGIS  0.356591269937457
+```
+
 Blad modelu jest nastêpuj¹cy:
 
 
@@ -262,6 +269,10 @@ Blad modelu jest nastêpuj¹cy:
       error_vec <- unname(predict.lm(model(),test())) - test()[,1];
       error_vec <- error_vec * error_vec;
       mean(error_vec)
+```
+
+```
+## [1] 0.01041152
 ```
 
 ## 10. Analiza modelu

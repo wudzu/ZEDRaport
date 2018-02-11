@@ -337,10 +337,15 @@ $(document).ready(function () {
       }
       
       as.data.frame(hprint,optional = T)</code></pre>
+<pre><code>##                                                      
+## 1                             bias 0.0157619960219939
+## 2                  naslonecznienie  0.821077879844465
+## 3 wspolczynnikNaslonecznieniaPVGIS  0.356591269937457</code></pre>
 <p>Blad modelu jest następujący:</p>
 <pre class="r"><code>      error_vec &lt;- unname(predict.lm(model(),test())) - test()[,1];
       error_vec &lt;- error_vec * error_vec;
       mean(error_vec)</code></pre>
+<pre><code>## [1] 0.01041152</code></pre>
 </div>
 <div id="analiza-modelu" class="section level2">
 <h2>10. Analiza modelu</h2>
