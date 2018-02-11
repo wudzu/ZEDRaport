@@ -2,7 +2,9 @@
 title: "Raport ZED"
 author: "Patryk Wêglarz"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ## Wstêp
@@ -18,7 +20,7 @@ W trakcie pracy wykorzystano pakiety wy³¹cznie pakiety wymagane do uruchomienia 
 
 ## 2. Wczytanie danych i powtarzalnoœæ wyników
 
-Przed ka¿dorazowym wybraniem zbioru danych do treningu i weryfikacji ustawiany jest seed liczb losowych. Stanowi to pewny sposób na powtarzalnoœæ wyników analizy.
+Przed ka¿dorazowym wybraniem zbioru danych do treningu i weryfikacji ustawiany jest seed liczb losowych. Stanowi to pewny sposób na powtarzalnoœæ wyników analizy.
 
 ```{r powtarzalnosc, ECHO=FALSE, results='hide'}
 set.seed(666)
@@ -96,7 +98,15 @@ Z racji nie posiadania wiedzy o mo¿liwych wartoœciach parametrów dane, które wyk
 
 ## 5. Rozmiar i statystyki
 
+Rozmiar pliku csv to 66,3MB. U¿yto jednak tylko po³owê kolumn, resztê wartoœci pominiêto ze wzglêdu braku pewnoœci co do ich ci¹g³oœci.
+
+## 6. Wartoœci atrybutów
+
 U¿ywamy do obliczeñ tylko kolumn, co do których mamy uzasadnione podejrzenie, ¿e s¹ ci¹g³e. Wszystkie zmienne, co do których istnieje w¹tpliwoœæ na rzecz danych kategorycznych pomijamy.
+
+```{r wartosci, ECHO=TRUE, results='hide'}
+summary(data)
+```
 
 ## 7. Korelacja miêdzy moc¹ a reszt¹ wspó³czynników
 
